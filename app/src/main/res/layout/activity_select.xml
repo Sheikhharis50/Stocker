@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/picture"
+    tools:context=".selectActivity">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="163dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="88dp"
+        android:paddingLeft="15dp"
+        android:text="@string/mydiary"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="169dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/tagline"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/head"
+        app:layout_constraintTop_toTopOf="@+id/head" />
+
+
+    <Button
+        android:id="@+id/user_login"
+        android:layout_width="200dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#011942"
+        android:includeFontPadding="true"
+        android:text="@string/user_login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag" />
+
+    <Button
+        android:id="@+id/admin_login"
+        android:layout_width="200dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="24dp"
+        android:background="#011942"
+        android:includeFontPadding="true"
+        android:text="@string/admin_login"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/user_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/user_login"
+        app:layout_constraintTop_toBottomOf="@+id/user_login" />
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

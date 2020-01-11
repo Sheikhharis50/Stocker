@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".Home">
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="163dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="32dp"
+        android:paddingLeft="15dp"
+        android:text="@string/mydiary"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:fontFamily="cursive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="169dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/tagline"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toTopOf="@+id/search_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/head"
+        app:layout_constraintTop_toTopOf="@+id/head"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <android.support.v7.widget.ActionMenuView
+        android:id="@+id/MenuView"
+        android:layout_width="43dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/menu_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+        app:layout_constraintStart_toEndOf="@+id/search_bar"
+        app:layout_constraintTop_toTopOf="@+id/search_bar">
+
+
+    </android.support.v7.widget.ActionMenuView>
+
+
+    <SearchView
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="50dp"
+        android:background="#FFDCE5EF"
+        android:queryHint="@string/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tag"
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="@+id/tag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/Cat"
+        android:layout_width="120dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="310dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/stores"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_bar"
+        app:layout_constraintVertical_bias="0.56" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Cat">
+
+        <ImageView
+            android:id="@+id/Appliance"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="-2dp"
+            android:contentDescription="@string/appliance"
+            app:layout_constraintBottom_toBottomOf="@+id/Clothes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/Clothes"
+            app:layout_constraintTop_toTopOf="@+id/Clothes"
+            app:layout_constraintVertical_bias="0.666"
+            app:srcCompat="@drawable/appliance" />
+
+
+        <ImageView
+            android:id="@+id/Clothes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/clothes"
+            app:srcCompat="@drawable/clothes"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="382dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.16000003">
+
+        <ImageView
+            android:id="@+id/Food"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/food"
+            app:srcCompat="@drawable/food"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="437dp" />
+
+        <ImageView
+            android:id="@+id/Departmental"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:contentDescription="@string/departmental"
+            app:srcCompat="@drawable/depart"
+            tools:layout_editor_absoluteX="208dp"
+            tools:layout_editor_absoluteY="439dp" />
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
